@@ -18,4 +18,11 @@ def ask(question):
 
 if __name__ == "__main__":
     q = " ".join(sys.argv[1:]) or "Say hello."
-    print(ask(q))
+    answer = ask(q)
+    print(answer)
+
+    os.makedirs("docs/runs", exist_ok=True)
+
+    with open("docs/runs/03-vector-db-uses.txt", "w", encoding="utf-8") as f:
+        f.write(f"Question:\n{q}\n\n")
+        f.write(f"Answer:\n{answer}\n")
