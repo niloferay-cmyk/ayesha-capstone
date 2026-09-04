@@ -1,9 +1,0 @@
-Question:
-Name 3 uses of vector databases
-
-Answer:
-1. **Recommendation Systems**: Vector databases can efficiently store and retrieve user and product embeddings for personalized recommendations based on similarity.
-
-2. **Image and Video Search**: They enable similarity searches for visual content by allowing queries based on vector representations of images or videos, facilitating content-based retrieval.
-
-3. **Natural Language Processing**: Vector databases support semantic search and retrieval by indexing word or sentence embeddings, enabling more relevant search results based on meaning rather than keywords.
