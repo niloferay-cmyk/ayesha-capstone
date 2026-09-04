@@ -1,0 +1,22 @@
+Question:
+how does fastapi handles async endpoints
+
+Answer:
+FastAPI handles async endpoints using Python's `async` and `await` keywords, allowing for non-blocking I/O operations. When you define an async endpoint, FastAPI executes it in an event loop, enabling it to handle many requests concurrently without waiting for each operation to complete sequentially.
+
+Here's a basic example of an async endpoint in FastAPI:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/items/")
+async def read_items():
+    await some_async_function()
+    return {"message": "Items retrieved"}
+```
+
+In this example, `some_async_function` would be an asynchronous operation (like fetching data from a database or an API). FastAPI runs this function without blocking the server, allowing it to process other requests simultaneously. 
+
+Using async functions is particularly beneficial for I/O-bound operations, as it improves scalability and responsiveness in your application.
